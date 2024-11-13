@@ -1,0 +1,70 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  ::first-letter {
+    text-transform: capitalize;
+  }
+  
+  .toggle-display {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 75px;
+    margin: 50px auto;
+    border: 5px solid #f7f7f5;
+    border-radius: 17px;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .toggle-display:after,
+  .toggle-display:before {
+    box-sizing: border-box;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 100px;
+    height: 55px;
+    border: 5px solid;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 32px;
+    transition: all 0.3s ease-out;
+  }
+  
+  .toggle-display:before {
+    content: "ABC";
+    color: black;
+    border-color: black;
+    background: yellow;
+  }
+  
+  .toggle-display:after {
+    left: auto;
+    right: 5px;
+    content: "Type";
+    border-color: black;
+    color: black;
+    background: #ccffbb;
+    opacity: 0.4;
+  }
+  
+  .toggle-display:checked:after {
+    opacity: 1;
+  }
+  
+  .toggle-display:checked:before {
+    opacity: 0.4;
+  }
+  

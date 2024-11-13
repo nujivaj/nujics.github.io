@@ -1,0 +1,39 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .cell {
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .cell:last-child {
+    border-right: none;
+  }
+  
+  .row:first-child .cell {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .cell:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .type-div {
+    margin-bottom: 10px;
+  }
+  

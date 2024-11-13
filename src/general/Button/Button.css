@@ -1,0 +1,109 @@
+.general-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--bg-color, #007bff);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    font-size: 15px;
+  }
+  
+  .general-button:hover {
+    background-color: var(--hover-color, white);
+  }
+  
+  .general-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .button {
+    flex: 0 0 calc(20% - 10px);
+    margin-bottom: 10px;
+  }
+  
+  .normal {
+    background-color: darkgray;
+  }
+  /* 
+  .normal:hover {
+    background-color: darkgray;
+  } */
+  
+  .fighting {
+    background-color: orange;
+  }
+  
+  .flying {
+    background-color: skyblue;
+  }
+  
+  .poison {
+    background-color: rgb(161, 12, 161);
+  }
+  
+  .ground {
+    background-color: brown;
+  }
+  
+  .rock {
+    background-color: gray;
+  }
+  
+  .bug {
+    background-color: limegreen;
+  }
+  
+  .ghost {
+    background-color: lavender;
+  }
+  
+  .steel {
+    background-color: silver;
+  }
+  
+  .fire {
+    background-color: red;
+  }
+  
+  .water {
+    background-color: #007bff;
+  }
+  
+  .grass {
+    background-color: green;
+  }
+  
+  .electric {
+    background-color: yellow;
+  }
+  
+  .psychic {
+    background-color: violet;
+  }
+  
+  .ice {
+    background-color: lightblue;
+  }
+  
+  .dragon {
+    background-color: gold;
+  }
+  
+  .dark {
+    background-color: #535853;
+  }
+  
+  .fairy {
+    background-color: pink;
+  }
+  
+  .stellar {
+    background-color: #097969;
+  }
+  
+  .unknown {
+    background-color: #daf7a6;
+  }
+  
