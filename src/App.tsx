@@ -1,7 +1,7 @@
 import "./styles.css";
-import { Button } from "./GeneralComponents/Button/Button";
-import { Table } from "./GeneralComponents/Table/Table";
-import { Grid } from "./GeneralComponents/Grid/Grid";
+import { Button } from "./general/Button/Button";
+import { Table } from "./general/Table/Table";
+import { Grid } from "./general/Grid/Grid";
 import React, { useState, useEffect } from "react";
 
 const APIS = {
@@ -16,10 +16,10 @@ function App() {
   const [pokemonList, setPokemonList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [selectedType, setSelectedType] = useState(null);
+  const [selectedType, setSelectedType] = useState("");
   const [pokemonTypeList, setPokemonTypeList] = useState([]);
-  const [singlePokemonInfo, setSinglePokemonInfo] = useState(null);
-  const [selectSinglePokemon, setSelectSinglePokemon] = useState(null);
+  const [singlePokemonInfo, setSinglePokemonInfo] = useState("");
+  const [selectSinglePokemon, setSelectSinglePokemon] = useState("");
   // const [sortAlphabetical, setSortAlphabetical] = useState(false);
   // const [sortReverseAlpha, setSortReverseAlpha] = useState(false);
   // const [toggleDisplay, setToggleDisplay] = useState(false);
@@ -38,7 +38,7 @@ function App() {
         const result = await response.json();
         setPokemonTypeList(result.results);
       } catch (error) {
-        setError(error.message);
+        setError(null);
       } finally {
         setIsLoading(false);
       }
@@ -60,7 +60,7 @@ function App() {
         const result = await response.json();
         setPokemonList(result);
       } catch (error) {
-        setError(error.message);
+        setError(null);
       } finally {
         setIsLoading(false);
       }
@@ -81,7 +81,7 @@ function App() {
         const result = await response.json();
         setSinglePokemonInfo(result);
       } catch (error) {
-        setError(error.message);
+        setError(null);
       } finally {
         setIsLoading(false);
       }
@@ -89,16 +89,16 @@ function App() {
     fetchData();
   }, [selectSinglePokemon]);
 
-  const handleClick = (type) => {
+  const handleClick = (type: string) => {
     setSelectedType(type);
-    setSelectSinglePokemon(null);
-    setSinglePokemonInfo(null);
+    setSelectSinglePokemon("");
+    setSinglePokemonInfo("");
   };
 
-  const handleGridClick = (name) => {
+  const handleGridClick = (name: string) => {
     setSelectSinglePokemon(name);
-    setPokemonList(null);
-    setSelectedType(null);
+    setPokemonList([]);
+    setSelectedType("");
   };
 
   return (

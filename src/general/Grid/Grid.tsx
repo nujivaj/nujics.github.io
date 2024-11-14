@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./Table.css";
+import "./Grid.css";
 
-export function Table({ pokemonList, onClick }) {
+export function Grid({ pokemonList, onClick }) {
   return (
     <div>
       <h2> {pokemonList.name} type </h2>

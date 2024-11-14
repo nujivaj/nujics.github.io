@@ -1,7 +1,7 @@
 import React from "react";
-import "./Grid.css";
+import "./Table.css";
 
-export function Grid({ pokemonInfo }) {
+export function Table({ pokemonInfo }) {
   const generationIndex = {
     1: { start: 0, end: 151 },
     2: { start: 152, end: 251 },
